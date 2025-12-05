@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stee - Conteúdo Exclusivo +18</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNJ2BMCJYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NNJ2BMCJYG');
+    </script>
+    <style>
+        :root {
+            --primary: #FF2D6B;
+            --primary-dark: #E81C5A;
+            --secondary: #6E45E2;
+            --dark: #1A1A2E;
+            --light: #F8F9FA;
+            --gray: #6C757D;
+            --verified: #0095F6;
+            --telegram: #0088CC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0F0F1A;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('img/capa-real.jpg') center/cover no-repeat;
+            margin-bottom: 20px;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner::after {
+            content: "+18";
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+            rgba(255, 45, 107, 0.3),
+            rgba(110, 69, 226, 0.3));
+            z-index: 1;
+        }
+
+        .profile {
+            margin-top: -70px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--dark);
+            object-fit: cover;
+            background-color: #2D2D42;
+        }
+
+        .profile-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .verified {
+            color: var(--verified);
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin: 15px auto 0;
+            font-size: 16px;
+            color: #D1D1D1;
+            padding: 0 20px;
+        }
+
+        /* Telegram CTA */
+        .telegram-cta {
+            background: rgba(0, 136, 204, 0.1);
+            border: 1px solid var(--telegram);
+            border-radius: 30px;
+            padding: 12px 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .telegram-cta:hover {
+            background: rgba(0, 136, 204, 0.2);
+        }
+
+        .telegram-icon {
+            color: var(--telegram);
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .telegram-text {
+            font-weight: 500;
+        }
+
+        .telegram-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Benefits Section */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: #1E1E2E;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .benefit-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .benefit-desc {
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        /* Pricing */
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: #1E1E2E;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .popular {
+            background: var(--primary);
+            color: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px 20px;
+            font-size: 12px;
+            font-weight: 600;
+            transform: rotate(45deg) translate(30%, -50%);
+            transform-origin: bottom left;
+            width: 150px;
+            text-align: center;
+        }
+
+        .plan-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .plan-price {
+            font-size: 40px;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--primary);
+        }
+
+        .plan-period {
+            font-size: 16px;
+            color: var(--gray);
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .plan-features li {
+            padding: 8px 0;
+            color: #D1D1D1;
+            border-bottom: 1px solid #2D2D42;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 45, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            background: #2D2D42;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px);
+            transition: filter 0.3s;
+        }
+
+        .gallery-item:hover img {
+            filter: blur(5px);
+        }
+
+        .locked-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .locked-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .locked-text {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1A1A2E;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-text {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-size: 12px;
+            color: #6C757D;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                height: 200px;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .pricing {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        /* SISTEMA DE ETAPAS WHATSAPP */
+.whatsapp-step {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px 30px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.plan-selection {
+    margin: 30px 0;
+}
+
+.plan-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.plan-option {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid var(--card-border);
+    border-radius: 15px;
+    padding: 25px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: left;
+}
+
+.plan-option:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    background: rgba(255, 45, 107, 0.05);
+}
+
+.plan-option.selected {
+    border-color: var(--primary);
+    background: rgba(255, 45, 107, 0.1);
+    box-shadow: 0 10px 20px rgba(255, 45, 107, 0.2);
+}
+
+.plan-option-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.plan-option-header h4 {
+    color: var(--light);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.plan-price-small {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.price-per-month {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.economy-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.plan-option-details ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.plan-option-details li {
+    padding: 8px 0;
+    color: #D1D1D1;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.plan-option-details li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.popular-badge-small {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.whatsapp-final-btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-final-btn:hover {
+    background: #1da851;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .plan-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-option {
+        max-width: 100%;
+    }
+    
+    .whatsapp-step {
+        padding: 30px 20px;
+    }
+}
+
+/* MELHORIAS NOS PLANOS */
+.economy-badge-large {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.plan-period {
+    margin: 15px 0 25px;
+}
+
+.price-breakdown {
+    display: block;
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 5px;
+}
+
+.original-price {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.plan-features li {
+    padding: 12px 0;
+    color: #D1D1D1;
+    border-bottom: 1px solid #2D2D42;
+    position: relative;
+    padding-left: 30px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.plan-features li i {
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.plan-features li strong {
+    color: var(--light);
+}
+
+.plan-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--gray);
+    text-align: center;
+}
+
+.plan-note i {
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+/* TABELA DE COMPARAÇÃO */
+.plan-comparison {
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 45, 107, 0.2);
+}
+
+.comparison-table {
+    overflow-x: auto;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+}
+
+.comparison-row.header {
+    background: rgba(255, 45, 107, 0.1);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--light);
+}
+
+.comparison-feature {
+    font-weight: 500;
+    color: #D1D1D1;
+}
+
+.comparison-plan {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* NOTA FINAL */
+.final-note {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(37, 211, 102, 0.1);
+    border-radius: 15px;
+    border: 2px solid #25D366;
+    text-align: center;
+}
+
+.final-note p {
+    margin: 10px 0;
+    color: #D1D1D1;
+}
+
+.final-note i {
+    color: #25D366;
+    margin-right: 10px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .plan-features li {
+        font-size: 0.9rem;
+        padding: 10px 0 10px 25px;
+    }
+    
+    .comparison-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        font-size: 0.9rem;
+        padding: 12px 10px;
+        gap: 10px;
+    }
+    
+    .plan-comparison {
+        padding: 20px;
+    }
+    
+    .economy-badge-large {
+        font-size: 0.7rem;
+        padding: 6px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-features li {
+        font-size: 0.85rem;
+    }
+    
+    .comparison-row {
+        font-size: 0.8rem;
+    }
+    
+    .plan-note {
+        font-size: 0.8rem;
+    }
+    
+    .final-note {
+        padding: 20px 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="banner">
+            <div class="banner-text">Conteúdo Exclusivo +18</div>
+        </div>
+
+        <div class="profile">
+            <img src="img/fotodeperfill.jpg" alt="Stee" class="profile-img">
+            <h1 class="profile-name">Stee <span class="verified"><i class="fas fa-check-circle"></i></span></h1>
+            <p class="">Entre no meu mundo sem censura. Aqui você encontra conteúdos exclusivos, vídeos atualizados e
+                muito prazer visual. Pronto para desbloquear tudo?</p>
+
+            <!-- Adicione isso após a bio no header -->
+<div class="profile-stats">
+    <div class="stat">
+        <span class="stat-number">1.5K+</span>
+        <span class="stat-label">Visualizações</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">150+</span>
+        <span class="stat-label">VIPs Ativos</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">⭐ 4.9</span>
+        <span class="stat-label">Avaliação</span>
+    </div>
+</div>
+
+<style>
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+</style>
+
+
+            <div class="telegram-cta">
+                <a href="https://t.me/+AdHg3PNiH-83OGQ5" class="telegram-link" target="_blank">
+                    <i class="fab fa-telegram-plane telegram-icon"></i>
+                    <span class="telegram-text">🔥 Conteúdo censurado grátis no grupo do Telegram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Benefits Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">O que você ganha sendo VIP</h2>
+
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-lock-open"></i></div>
+                    <h3 class="benefit-title">Conteúdo +18 Exclusivo</h3>
+                    <p class="benefit-desc">Fotos e vídeos completos que você não encontra no grupo gratuito</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="benefit-title">Atualizações Semanais</h3>
+                    <p class="benefit-desc">Novos conteúdos toda semana para manter a experiência sempre fresca</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-crown"></i></div>
+                    <h3 class="benefit-title">Atendimento VIP</h3>
+                    <p class="benefit-desc">Grupo fechado exclusivo e prioridade no atendimento</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-star"></i></div>
+                    <h3 class="benefit-title">Conteúdos Personalizados</h3>
+                    <p class="benefit-desc">Nos planos premium, você pode solicitar conteúdos sob demanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Pricing Section -->
+<section class="section" style="background: #1A1A2E;">
+    <div class="container">
+        <h2 class="section-title">Escolha seu Plano VIP</h2>
+
+        <div class="pricing">
+            <!-- Plano 1 Mês -->
+            <div class="pricing-card">
+                <h3 class="plan-name">VIP - 1 MÊS</h3>
+                <div class="plan-price">R$49,90</div>
+                <div class="plan-period">
+                    <span class="price-breakdown">R$ 49,90/mês</span>
+                </div>
+
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> Acesso a todo conteúdo +18</li>
+                    <li><i class="fas fa-check-circle"></i> Atualizações semanais</li>
+                    <li><i class="fas fa-check-circle"></i> Grupo VIP no Telegram</li>
+                    <li><i class="fas fa-check-circle"></i> 1 mês de acesso completo</li>
+                    <li><i class="fas fa-check-circle"></i> Fotos e vídeos exclusivos</li>
+                    <li><i class="fas fa-check-circle"></i> Conteúdo sem censura</li>
+                </ul>
+
+                <a href="https://pay.cakto.com.br/4ppkbiy_444150" class="btn">Assinar Agora</a>
+                <p class="plan-note"><i class="fas fa-bolt"></i> Pagamento único</p>
+            </div>
+
+            <!-- Plano 3 Meses (MAIS POPULAR) -->
+            <div class="pricing-card" style="border: 2px solid var(--primary); position: relative;">
+                <div class="popular">MAIS POPULAR</div>
+                <div class="economy-badge-large">ECONOMIZE 10%</div>
+                
+                <h3 class="plan-name">VIP - 3 MESES</h3>
+                <div class="plan-price">R$159,90</div>
+                <div class="plan-period">
+                    <span class="price-breakdown">R$ 53,30/mês</span>
+                    <span class="original-price">De R$ 179,70</span>
+                </div>
+
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> <strong>Tudo do plano 1 mês</strong></li>
+                    <li><i class="fas fa-check-circle"></i> WhatsApp direto e prioritário</li>
+                    <li><i class="fas fa-check-circle"></i> Conteúdos bônus exclusivos</li>
+                    <li><i class="fas fa-check-circle"></i> Respostas em até 2 horas</li>
+                    <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+                    <li><i class="fas fa-check-circle"></i> 3 meses de acesso</li>
+                    <li><i class="fas fa-check-circle"></i> 2 conteúdos extras por mês</li>
+                    <li><i class="fas fa-check-circle"></i> Grupo VIP com interação direta</li>
+                </ul>
+
+                <a href="https://pay.cakto.com.br/ss9j6o5_444200" class="btn">Assinar Agora</a>
+                <p class="plan-note"><i class="fas fa-crown"></i> Melhor custo-benefício</p>
+            </div>
+
+            <!-- Plano 6 Meses -->
+            <div class="pricing-card">
+                <div class="economy-badge-large">ECONOMIZE 30%</div>
+                
+                <h3 class="plan-name">VIP - 6 MESES</h3>
+                <div class="plan-price">R$249,90</div>
+                <div class="plan-period">
+                    <span class="price-breakdown">R$ 41,65/mês</span>
+                    <span class="original-price">De R$ 359,40</span>
+                </div>
+
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> <strong>Tudo dos planos anteriores</strong></li>
+                    <li><i class="fas fa-check-circle"></i> WhatsApp 24/7 prioritário</li>
+                    <li><i class="fas fa-check-circle"></i> 1 conteúdo personalizado/mês</li>
+                    <li><i class="fas fa-check-circle"></i> Respostas em até 30 minutos</li>
+                    <li><i class="fas fa-check-circle"></i> Atendimento VIP exclusivo</li>
+                    <li><i class="fas fa-check-circle"></i> 6 meses de acesso</li>
+                    <li><i class="fas fa-check-circle"></i> 4 conteúdos extras por mês</li>
+                    <li><i class="fas fa-check-circle"></i> Pedidos prioritários de conteúdo</li>
+                    <li><i class="fas fa-check-circle"></i> Acesso a conteúdos raros</li>
+                    <li><i class="fas fa-check-circle"></i> Bônus surpresa mensal</li>
+                </ul>
+
+                <a href="https://pay.cakto.com.br/3eguiav_444499" class="btn">Assinar Agora</a>
+                <p class="plan-note"><i class="fas fa-gem"></i> Experiência premium total</p>
+            </div>
+        </div>
+        
+        <!-- Comparação de Planos -->
+        <div class="plan-comparison">
+            <h3 style="text-align: center; margin: 40px 0 20px; color: var(--light);">
+                <i class="fas fa-chart-bar"></i> Comparação de Planos
+            </h3>
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-feature">Benefício</div>
+                    <div class="comparison-plan">1 MÊS</div>
+                    <div class="comparison-plan">3 MESES</div>
+                    <div class="comparison-plan">6 MESES</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Conteúdo +18 Completo</div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Atualizações Semanais</div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Grupo VIP Telegram</div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">WhatsApp Direto</div>
+                    <div class="comparison-plan"><i class="fas fa-times" style="color: #888;"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-check" style="color: var(--primary);"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Resposta Rápida</div>
+                    <div class="comparison-plan">12-24h</div>
+                    <div class="comparison-plan">Até 2h</div>
+                    <div class="comparison-plan">Até 30min</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Conteúdo Personalizado</div>
+                    <div class="comparison-plan"><i class="fas fa-times" style="color: #888;"></i></div>
+                    <div class="comparison-plan"><i class="fas fa-times" style="color: #888;"></i></div>
+                    <div class="comparison-plan">1/mês</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Economia</div>
+                    <div class="comparison-plan">-</div>
+                    <div class="comparison-plan">10%</div>
+                    <div class="comparison-plan">30%</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Custo Mensal</div>
+                    <div class="comparison-plan">R$ 49,90</div>
+                    <div class="comparison-plan">R$ 53,30</div>
+                    <div class="comparison-plan">R$ 41,65</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nota Final -->
+        <div class="final-note">
+            <p><i class="fas fa-star"></i> <strong>Garantia de satisfação:</strong> Se não gostar em 7 dias, devolvemos seu dinheiro.</p>
+            <p><i class="fas fa-shield-alt"></i> <strong>Pagamento 100% seguro</strong> via PIX e plataformas confiáveis</p>
+        </div>
+    </div>
+</section>
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Prévia do Conteúdo Exclusivo</h2>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="img/foto1.jpg" alt="Preview 1">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/foto2.jpg" alt="Preview 2">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/foto3.jpg" alt="Preview 3">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/foto4.jpg" alt="Preview 4">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/foto5.jpg" alt="Preview 5">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="img/foto6.jpg" alt="Preview 6">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="img/foto7.jpg" alt="Preview 7">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="img/foto8.jpg" alt="Preview 8">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="img/foto9.jpg" alt="Preview 9">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="img/foto10.jpg" alt="Preview 10">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/foto11.jpg" alt="Preview 11">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/foto2.jpg" <img src="https://via.placeholder.com/300x400/6E45E2/FFFFFF?text=Stee"
+                        alt="Preview 6">
+                    <div class="locked-content">
+                        <div class="locked-icon"><i class="fas fa-lock"></i></div>
+                        <div class="locked-text">Conteúdo bloqueado</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-cta">
+                <a href="#pricing" class="btn" style="max-width: 300px;">Desbloqueie tudo agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adicione após a seção de galeria -->
+<section class="section" style="background: #1A1A2E;">
+    <div class="container">
+        <h2 class="section-title">O que meus VIPs dizem</h2>
+        
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Conteúdo incrível! Vale cada centavo. A Stee é muito atenciosa."
+                </div>
+                <div class="testimonial-author">- João, VIP há 3 meses</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Melhor investimento que fiz. Atualizações constantes e conteúdo exclusivo."
+                </div>
+                <div class="testimonial-author">- Pedro, VIP há 6 meses</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Atenção personalizada e conteúdo de qualidade. Recomendo!"
+                </div>
+                <div class="testimonial-author">- Lucas, VIP há 1 mês</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(255, 45, 107, 0.3);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #D1D1D1;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    color: var(--primary);
+    font-weight: 600;
+    text-align: right;
+}
+</style>
+
+<!-- ADICIONE ISSO DEPOIS DA SEÇÃO DA GALERIA -->
+<section class="section" style="background: rgba(255, 45, 107, 0.05);">
+    <div class="container">
+        <div class="whatsapp-step">
+            <h3 style="color: var(--primary); margin-bottom: 10px;">
+                <i class="fas fa-comments"></i> Ainda com dúvidas?
+            </h3>
+            <p style="color: #D1D1D1; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Escolha seu plano ideal abaixo e fale diretamente comigo no WhatsApp para finalizar sua assinatura VIP.
+            </p>
+            
+            <!-- Etapa 1: Escolher Plano -->
+            <div class="plan-selection">
+                <p style="margin-bottom: 15px; font-weight: 500;">Primeiro, escolha seu plano:</p>
+                
+                <div class="plan-options">
+                    <div class="plan-option" data-plan="1mes" onclick="selectPlan('1mes')">
+                        <div class="plan-option-header">
+                            <h4>VIP 1 MÊS</h4>
+                            <div class="plan-price-small">R$ 49,90</div>
+                        </div>
+                        <div class="plan-option-details">
+                            <div class="price-per-month">R$ 49,90/mês</div>
+                            <ul>
+                                <li>✓ Conteúdo completo +18</li>
+                                <li>✓ Atualizações semanais</li>
+                                <li>✓ Grupo VIP Telegram</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-option popular" data-plan="3meses" onclick="selectPlan('3meses')">
+                        <div class="popular-badge-small">MAIS POPULAR</div>
+                        <div class="plan-option-header">
+                            <h4>VIP 3 MESES</h4>
+                            <div class="plan-price-small">R$ 159,90</div>
+                        </div>
+                        <div class="plan-option-details">
+                            <div class="price-per-month">R$ 53,30/mês</div>
+                            <div class="economy-badge">Economize 10%</div>
+                            <ul>
+                                <li>✓ Tudo do 1 mês</li>
+                                <li>✓ WhatsApp direto</li>
+                                <li>✓ Prioridade máxima</li>
+                                <li>✓ Conteúdos bônus</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-option" data-plan="6meses" onclick="selectPlan('6meses')">
+                        <div class="plan-option-header">
+                            <h4>VIP 6 MESES</h4>
+                            <div class="plan-price-small">R$ 249,90</div>
+                        </div>
+                        <div class="plan-option-details">
+                            <div class="price-per-month">R$ 41,65/mês</div>
+                            <div class="economy-badge">Economize 30%</div>
+                            <ul>
+                                <li>✓ Tudo dos outros planos</li>
+                                <li>✓ Bônus exclusivos</li>
+                                <li>✓ Atendimento 24/7</li>
+                                <li>✓ 1 conteúdo personalizado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Etapa 2: Botão WhatsApp (aparece depois de escolher) -->
+            <div id="whatsappFinal" style="display: none; margin-top: 30px; text-align: center;">
+                <div style="background: rgba(37, 211, 102, 0.1); border-radius: 15px; padding: 25px; border: 2px solid #25D366;">
+                    <h4 style="color: #25D366; margin-bottom: 15px;">
+                        <i class="fab fa-whatsapp"></i> Pronto para finalizar?
+                    </h4>
+                    <p style="color: #D1D1D1; margin-bottom: 20px;">
+                        Clique abaixo para falar comigo no WhatsApp e finalizar sua assinatura do plano 
+                        <strong><span id="selectedPlanName">VIP 1 MÊS</span></strong>
+                    </p>
+                    <a href="#" id="whatsappLink" class="whatsapp-final-btn">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp Agora
+                    </a>
+                    <p style="font-size: 14px; color: #888; margin-top: 15px;">
+                        ⚡ Resposta em até 5 minutos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">Como recebo o conteúdo após assinar?</div>
+                <div class="faq-answer">Imediatamente após a confirmação do pagamento, você recebe acesso ao grupo VIP no Telegram.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Posso cancelar quando quiser?</div>
+                <div class="faq-answer">Sim, a assinatura não é recorrente. Você paga apenas pelo período escolhido.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Quais formas de pagamento aceita?</div>
+                <div class="faq-answer">Aceitamos PIX e pagamentos via Telegram.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.faq {
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+    padding: 15px;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    color: var(--gray);
+}
+
+.faq-item.active .faq-answer {
+    padding: 15px;
+    max-height: 200px;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+</style>
+
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+    });
+});
+</script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 Stee - Todos os direitos reservados</p>
+            <p class="disclaimer">Este site é apenas para adultos e você deve ter pelo menos 18 anos de idade para
+                acessar. Ao se inscrever, você confirma que tem mais de 18 anos e aceita nossos Termos de Uso e Política
+                de Privacidade. Todos os conteúdos são protegidos por direitos autorais e não podem ser redistribuídos.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+// Sistema de etapas WhatsApp
+let selectedPlan = '1mes';
+const planData = {
+    '1mes': {
+        name: 'VIP 1 MÊS',
+        price: 'R$ 49,90',
+        monthly: 'R$ 49,90/mês',
+        whatsappMsg: 'Olá Stee! Quero assinar o plano VIP 1 MÊS por R$ 49,90. Conteúdo completo, atualizações semanais e grupo VIP no Telegram. Podemos finalizar?'
+    },
+    '3meses': {
+        name: 'VIP 3 MESES',
+        price: 'R$ 159,90',
+        monthly: 'R$ 53,30/mês',
+        whatsappMsg: 'Olá Stee! Quero assinar o plano VIP 3 MESES por R$ 159,90 (economia de 10%). WhatsApp direto, conteúdos bônus, respostas em até 2h. Podemos finalizar?'
+    },
+    '6meses': {
+        name: 'VIP 6 MESES',
+        price: 'R$ 249,90',
+        monthly: 'R$ 41,65/mês',
+        whatsappMsg: 'Olá Stee! Quero assinar o plano VIP 6 MESES por R$ 249,90 (economia de 30%). WhatsApp 24/7, conteúdo personalizado mensal, respostas em 30min. Podemos finalizar?'
+    }
+};
+
+function selectPlan(plan) {
+    // Remove seleção anterior
+    document.querySelectorAll('.plan-option').forEach(option => {
+        option.classList.remove('selected');
+    });
+    
+    // Adiciona seleção nova
+    document.querySelector(`[data-plan="${plan}"]`).classList.add('selected');
+    
+    // Atualiza plano selecionado
+    selectedPlan = plan;
+    const planInfo = planData[plan];
+    
+    // Atualiza exibição
+    document.getElementById('selectedPlanName').textContent = planInfo.name;
+    
+    // Atualiza link do WhatsApp
+    const whatsappNumber = '5519988416818'; // SUBSTITUA pelo seu número com DDD
+    const encodedMessage = encodeURIComponent(planInfo.whatsappMsg);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    document.getElementById('whatsappLink').href = whatsappUrl;
+    
+    // Mostra botão final
+    document.getElementById('whatsappFinal').style.display = 'block';
+    
+    // Rola suavemente até o botão
+    setTimeout(() => {
+        document.getElementById('whatsappFinal').scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }, 300);
+}
+
+// Seleciona o plano mais popular por padrão
+window.addEventListener('DOMContentLoaded', () => {
+    selectPlan('3meses'); // Plano 3 meses como padrão
+});
+</script>
+</body>
+
+</html>
