@@ -11,8 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNJ2BMCJYG"></script>
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHB276G2LS"></script>
 <script>
@@ -1024,6 +1023,266 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   CORREÇÕES DE RESPONSIVIDADE - MÓBILE FIRST
+   ============================================ */
+
+/* RESET PARA TELAS PEQUENAS */
+@media (max-width: 768px) {
+    /* 1. CORRIGIR GALERIA TORTA */
+    .gallery {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        margin-top: 20px !important;
+    }
+    
+    .gallery-item {
+        width: 100% !important;
+        height: 180px !important;
+        min-height: 180px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 6px !important;
+        overflow: hidden !important;
+    }
+    
+    .gallery-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        display: block !important;
+    }
+    
+    .locked-content {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 10px !important;
+    }
+    
+    /* 2. CORRIGIR SEÇÃO "AINDA COM DÚVIDAS" */
+    .whatsapp-step {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 15px !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .plan-options {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+    
+    .plan-option {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        transform: none !important;
+    }
+    
+    /* Remover transform que pode estar causando distorção */
+    .plan-option:hover,
+    .plan-option.selected {
+        transform: none !important;
+    }
+    
+    .popular-badge-small {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 0 auto 10px !important;
+        display: inline-block !important;
+        width: auto !important;
+    }
+    
+    /* 3. CORRIGIR HEADER/BANNER */
+    .banner {
+        height: 200px !important;
+        margin-bottom: 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    .profile {
+        margin-top: -50px !important;
+    }
+    
+    .profile-img {
+        width: 100px !important;
+        height: 100px !important;
+        border: 3px solid var(--dark) !important;
+    }
+    
+    .profile-name {
+        font-size: 1.4rem !important;
+        text-align: center !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    .bio {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        padding: 0 10px !important;
+        text-align: center !important;
+    }
+    
+    /* 4. CORRIGIR ESTATÍSTICAS */
+    .profile-stats {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        margin: 15px 0 !important;
+        padding: 0 10px !important;
+    }
+    
+    .stat {
+        flex: 0 0 calc(33% - 10px) !important;
+        text-align: center !important;
+    }
+    
+    .stat-number {
+        font-size: 1.1rem !important;
+        display: block !important;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem !important;
+        display: block !important;
+    }
+    
+    /* 5. CORRIGIR BOTÃO TELEGRAM */
+    .telegram-cta {
+        max-width: 100% !important;
+        margin: 15px !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .telegram-text {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+    }
+    
+    /* 6. CORRIGIR SEÇÃO DE BENEFÍCIOS */
+    .benefits {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+    }
+    
+    .benefit-card {
+        padding: 20px 15px !important;
+    }
+    
+    /* 7. CORRIGIR SEÇÃO DE PREÇOS */
+    .pricing {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .pricing-card {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .plan-price {
+        font-size: 2.2rem !important;
+    }
+    
+    /* 8. CORRIGIR TESTEMUNHOS */
+    .testimonials {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .testimonial-card {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    /* 9. CORRIGIR FAQ */
+    .faq {
+        width: 100% !important;
+        margin: 20px 0 !important;
+    }
+    
+    .faq-item {
+        margin-bottom: 10px !important;
+    }
+    
+    /* 10. GARANTIR QUE TUDO CAIBA NA TELA */
+    * {
+        max-width: 100% !important;
+    }
+    
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+}
+
+/* TELAS MUITO PEQUENAS (iPhone 5/SE) */
+@media (max-width: 375px) {
+    .gallery-item {
+        height: 150px !important;
+        min-height: 150px !important;
+    }
+    
+    .profile-img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    .profile-name {
+        font-size: 1.2rem !important;
+    }
+    
+    .plan-price {
+        font-size: 1.8rem !important;
+    }
+    
+    .btn {
+        padding: 10px 15px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* CORREÇÃO PARA IMPEDIR SCROLL AUTOMÁTICO */
+html, body {
+    scroll-behavior: auto !important;
+    scroll-padding-top: 0 !important;
+}
+
+/* FORÇAR PÁGINA COMEÇAR NO TOPO */
+body {
+    scroll-snap-type: none !important;
+}
+
+/* REMOVER QUALQUER ÂNCORA QUE POSSA ESTAR CAUSANDO SCROLL */
+:target {
+    scroll-margin-top: 0 !important;
+}
 </style>
 </head>
 
@@ -1699,6 +1958,47 @@ function selectPlan(plan) {
 window.addEventListener('DOMContentLoaded', () => {
     selectPlan('3meses'); // Plano 3 meses como padrão
 });
+</script>
+
+// ADICIONE ISSO NO FINAL, ANTES DO </body>
+<script>
+// Impedir scroll automático quando a página carrega
+window.addEventListener('load', function() {
+    // Garantir que a página comece no topo
+    window.scrollTo(0, 0);
+    
+    // Remover qualquer hash da URL que possa causar scroll
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
+});
+
+// Também prevenir scroll quando a página é carregada
+document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
+    
+    // Prevenir comportamento padrão de âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
+
+// Corrigir qualquer scroll automático que scripts externos possam causar
+setTimeout(() => {
+    window.scrollTo(0, 0);
+}, 100);
 </script>
 </body>
 
