@@ -1317,27 +1317,100 @@ body {
 
 <style>
 .profile-stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px auto;
-    max-width: 500px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+    margin: 20px auto !important;
+    max-width: 500px !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
 }
 
 .stat {
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    min-width: 80px !important;
 }
 
 .stat-number {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
+    display: block !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--primary) !important;
+    line-height: 1.2 !important;
 }
 
 .stat-label {
-    font-size: 0.9rem;
-    color: var(--gray);
+    display: block !important;
+    font-size: 0.85rem !important;
+    color: var(--gray) !important;
+    margin-top: 5px !important;
+    line-height: 1.2 !important;
+}
+
+/* RESPONSIVIDADE PARA TELAS PEQUENAS */
+@media (max-width: 768px) {
+    .profile-stats {
+        gap: 15px !important;
+        margin: 15px auto !important;
+        flex-wrap: wrap !important;
+        justify-content: space-around !important;
+        padding: 0 10px !important;
+    }
+    
+    .stat {
+        min-width: 70px !important;
+        flex: 1 !important;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-stats {
+        gap: 10px !important;
+    }
+    
+    .stat {
+        min-width: 60px !important;
+    }
+    
+    .stat-number {
+        font-size: 1.1rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* PARA TELAS MUITO PEQUENAS (iPhone SE) */
+@media (max-width: 375px) {
+    .profile-stats {
+        gap: 8px !important;
+    }
+    
+    .stat {
+        min-width: 55px !important;
+    }
+    
+    .stat-number {
+        font-size: 1rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.65rem !important;
+    }
 }
 </style>
 
@@ -1960,7 +2033,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-// ADICIONE ISSO NO FINAL, ANTES DO </body>
 <script>
 // Impedir scroll automático quando a página carrega
 window.addEventListener('load', function() {
