@@ -1283,6 +1283,40 @@ body {
 :target {
     scroll-margin-top: 0 !important;
 }
+
+/* PREVENIR SCROLL AUTOMÁTICO */
+html {
+    scroll-behavior: auto !important;
+}
+
+body {
+    overflow-anchor: none !important;
+    scroll-behavior: auto !important;
+}
+
+/* Remover qualquer foco automático */
+:focus {
+    outline: none !important;
+}
+
+/* Garantir que nenhum elemento tenha auto-focus */
+[autofocus] {
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+}
+
+/* Prevenir que a URL com # faça scroll */
+:target {
+    scroll-margin-top: 0 !important;
+    scroll-padding-top: 0 !important;
+}
+
+/* Ocultar seção do WhatsApp inicialmente para evitar que seja focada */
+#whatsappFinal {
+    display: none !important;
+}
 </style>
 </head>
 
@@ -1865,7 +1899,7 @@ body {
                         Clique abaixo para falar comigo no WhatsApp e finalizar sua assinatura do plano 
                         <strong><span id="selectedPlanName">VIP 1 MÊS</span></strong>
                     </p>
-                    <a href="#" id="whatsappLink" class="whatsapp-final-btn">
+                    <a href="wa.me/551988416818" id="whatsappLink" class="whatsapp-final-btn">
                         <i class="fab fa-whatsapp"></i> Falar no WhatsApp Agora
                     </a>
                     <p style="font-size: 14px; color: #888; margin-top: 15px;">
@@ -1992,44 +2026,115 @@ const planData = {
     }
 };
 
-function selectPlan(plan) {
+function selectPlan(plan, preventScroll = false) {
     // Remove seleção anterior
     document.querySelectorAll('.plan-option').forEach(option => {
         option.classList.remove('selected');
     });
     
     // Adiciona seleção nova
-    document.querySelector(`[data-plan="${plan}"]`).classList.add('selected');
+    const planElement = document.querySelector(`[data-plan="${plan}"]`);
+    if (planElement) {
+        planElement.classList.add('selected');
+    }
     
     // Atualiza plano selecionado
     selectedPlan = plan;
     const planInfo = planData[plan];
     
     // Atualiza exibição
-    document.getElementById('selectedPlanName').textContent = planInfo.name;
+    const selectedPlanNameElement = document.getElementById('selectedPlanName');
+    if (selectedPlanNameElement) {
+        selectedPlanNameElement.textContent = planInfo.name;
+    }
     
     // Atualiza link do WhatsApp
     const whatsappNumber = '5519988416818'; // SUBSTITUA pelo seu número com DDD
     const encodedMessage = encodeURIComponent(planInfo.whatsappMsg);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    document.getElementById('whatsappLink').href = whatsappUrl;
+    const whatsappLinkElement = document.getElementById('whatsappLink');
+    if (whatsappLinkElement) {
+        whatsappLinkElement.href = whatsappUrl;
+    }
     
     // Mostra botão final
-    document.getElementById('whatsappFinal').style.display = 'block';
-    
-    // Rola suavemente até o botão
-    setTimeout(() => {
-        document.getElementById('whatsappFinal').scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    }, 300);
+    const whatsappFinalElement = document.getElementById('whatsappFinal');
+    if (whatsappFinalElement) {
+        whatsappFinalElement.style.display = 'block';
+        
+        // SÓ FAZ SCROLL SE NÃO ESTIVER PREVENIDO
+        if (!preventScroll) {
+            // Pequeno delay para garantir que o elemento esteja visível
+            setTimeout(() => {
+                whatsappFinalElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }, 300);
+        }
+    }
 }
 
-// Seleciona o plano mais popular por padrão
-window.addEventListener('DOMContentLoaded', () => {
-    selectPlan('3meses'); // Plano 3 meses como padrão
+// GARANTIR QUE A PÁGINA COMEÇE NO TOPO
+window.addEventListener('load', function() {
+    // Garantir que a página comece no topo
+    window.scrollTo(0, 0);
+    
+    // Remover qualquer hash da URL
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+    
+    // Seleciona o plano mais popular MAS SEM FAZER SCROLL
+    selectPlan('3meses', true); // true = não faz scroll
+});
+
+// Também prevenir scroll quando a página é carregada
+document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
+    
+    // Prevenir comportamento padrão de âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
+
+// Prevenir scroll automático de scripts
+setTimeout(() => {
+    window.scrollTo(0, 0);
+}, 50);
+
+// FORÇAR MANTER NO TOPO POR MAIS TEMPO (para scripts que rodam mais tarde)
+setTimeout(() => {
+    if (window.scrollY > 0) {
+        window.scrollTo(0, 0);
+    }
+}, 200);
+
+// Adicionar também um listener para o evento beforeunload
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
+
+// CORREÇÃO PARA CLIQUE NOS PLANOS - mantém o scroll normal
+document.querySelectorAll('.plan-option').forEach(option => {
+    option.addEventListener('click', function() {
+        const plan = this.getAttribute('data-plan');
+        selectPlan(plan, false); // false = faz scroll normalmente
+    });
 });
 </script>
 
